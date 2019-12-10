@@ -16,6 +16,7 @@
 		0CB028A0239F437500E36E41 /* countryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CB0289F239F437500E36E41 /* countryData.json */; };
 		0CB028A2239F444D00E36E41 /* Bundle + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB028A1239F444D00E36E41 /* Bundle + Extensions.swift */; };
 		0CB028A5239F459500E36E41 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB028A4239F459500E36E41 /* CountryData.swift */; };
+		0CB028A7239F492300E36E41 /* exchangeRateData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CB028A6239F492300E36E41 /* exchangeRateData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0CB0289F239F437500E36E41 /* countryData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countryData.json; sourceTree = "<group>"; };
 		0CB028A1239F444D00E36E41 /* Bundle + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + Extensions.swift"; sourceTree = "<group>"; };
 		0CB028A4239F459500E36E41 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
+		0CB028A6239F492300E36E41 /* exchangeRateData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exchangeRateData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		0CB0287F239F401800E36E41 = {
 			isa = PBXGroup;
 			children = (
+				0CB028A6239F492300E36E41 /* exchangeRateData.json */,
 				0CB0289F239F437500E36E41 /* countryData.json */,
 				0CB0288A239F401800E36E41 /* ConcurrencyLab */,
 				0CB02889239F401800E36E41 /* Products */,
@@ -136,6 +139,7 @@
 			files = (
 				0CB02898239F401D00E36E41 /* LaunchScreen.storyboard in Resources */,
 				0CB02895239F401D00E36E41 /* Assets.xcassets in Resources */,
+				0CB028A7239F492300E36E41 /* exchangeRateData.json in Resources */,
 				0CB028A0239F437500E36E41 /* countryData.json in Resources */,
 				0CB02893239F401800E36E41 /* Main.storyboard in Resources */,
 			);

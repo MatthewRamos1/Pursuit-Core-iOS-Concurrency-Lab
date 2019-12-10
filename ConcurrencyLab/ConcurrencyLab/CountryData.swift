@@ -8,4 +8,17 @@
 
 import Foundation
 
-struct 
+struct Country: Decodable {
+    let name: String
+    let capital: String
+    let population: Int
+    let flag: String
+    let currencies: Currency
+    
+}
+
+struct Currency: Decodable {
+    let code: String
+    let name: String
+    let symbol: String
+}
