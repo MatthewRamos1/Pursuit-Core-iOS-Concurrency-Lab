@@ -23,13 +23,60 @@
                                 <rect key="frame" x="0.0" y="196" width="414" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="eLk-SG-T7n">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryCell" rowHeight="115" id="eLk-SG-T7n" customClass="CountryCell" customModule="ConcurrencyLab" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="115"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eLk-SG-T7n" id="Ps8-eb-tFv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEO-fF-6SA">
+                                                    <rect key="frame" x="28" y="47" width="240" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fnY-tn-LIP">
+                                                    <rect key="frame" x="276" y="9" width="138" height="97"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="97" id="1Ya-b1-khM"/>
+                                                        <constraint firstAttribute="width" constant="138" id="QbF-ah-Qrr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwk-Vo-nfv">
+                                                    <rect key="frame" x="28" y="18" width="240" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCe-as-Sdf">
+                                                    <rect key="frame" x="28" y="76" width="240" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fnY-tn-LIP" firstAttribute="top" secondItem="Ps8-eb-tFv" secondAttribute="top" constant="9" id="AcL-bY-Ryu"/>
+                                                <constraint firstItem="fnY-tn-LIP" firstAttribute="leading" secondItem="CEO-fF-6SA" secondAttribute="trailing" constant="8" id="FHv-TU-rea"/>
+                                                <constraint firstItem="fnY-tn-LIP" firstAttribute="leading" secondItem="rCe-as-Sdf" secondAttribute="trailing" constant="8" id="NGv-E1-2N2"/>
+                                                <constraint firstAttribute="trailing" secondItem="fnY-tn-LIP" secondAttribute="trailing" id="O2f-YH-rYc"/>
+                                                <constraint firstAttribute="bottom" secondItem="fnY-tn-LIP" secondAttribute="bottom" constant="9" id="UW1-Pe-BHF"/>
+                                                <constraint firstItem="fnY-tn-LIP" firstAttribute="leading" secondItem="Uwk-Vo-nfv" secondAttribute="trailing" constant="8" id="Wxz-AF-FQY"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rCe-as-Sdf" secondAttribute="bottom" constant="7" id="dpl-SR-XAe"/>
+                                                <constraint firstItem="Uwk-Vo-nfv" firstAttribute="top" secondItem="Ps8-eb-tFv" secondAttribute="topMargin" constant="7" id="lq7-gN-4ea"/>
+                                                <constraint firstItem="CEO-fF-6SA" firstAttribute="top" secondItem="Uwk-Vo-nfv" secondAttribute="bottom" constant="8" id="o4g-9h-USD"/>
+                                                <constraint firstItem="rCe-as-Sdf" firstAttribute="leading" secondItem="Ps8-eb-tFv" secondAttribute="leadingMargin" constant="8" id="rtv-bE-cwA"/>
+                                                <constraint firstItem="CEO-fF-6SA" firstAttribute="leading" secondItem="Ps8-eb-tFv" secondAttribute="leadingMargin" constant="8" id="tkm-Oq-fW9"/>
+                                                <constraint firstItem="Uwk-Vo-nfv" firstAttribute="leading" secondItem="Ps8-eb-tFv" secondAttribute="leadingMargin" constant="8" id="zIY-3p-lsF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="capitalLabel" destination="CEO-fF-6SA" id="hka-ev-LEn"/>
+                                            <outlet property="countryNameLabel" destination="Uwk-Vo-nfv" id="Ky6-A7-tFJ"/>
+                                            <outlet property="flagView" destination="fnY-tn-LIP" id="GhF-da-c2B"/>
+                                            <outlet property="populationLabel" destination="rCe-as-Sdf" id="os9-gR-1yO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -47,6 +94,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Countries" id="K3F-qm-Al9"/>
+                    <connections>
+                        <outlet property="searchBar" destination="xaX-dg-Q4N" id="K7Z-qb-Cyk"/>
+                        <outlet property="tableView" destination="pIg-Lh-9Ge" id="FIe-fR-hqq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

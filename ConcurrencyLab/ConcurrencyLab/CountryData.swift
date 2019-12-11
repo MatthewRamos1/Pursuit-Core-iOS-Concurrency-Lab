@@ -12,8 +12,11 @@ struct Country: Decodable {
     let name: String
     let capital: String
     let population: Int
-    let flag: String
-    let currencies: Currency
+    let alpha2Code: String
+    let currencies: [Currency]
+    var flagURL: String {
+        return "https://www.countryflags.io/\(alpha2Code)/flat/64.png"
+    }
     
 }
 
@@ -21,4 +24,17 @@ struct Currency: Decodable {
     let code: String
     let name: String
     let symbol: String
+}
+
+extension Country {
+    
+    static func getCountries(_ data: Data) -> [Country] {
+        var countries = [Country]()
+        do {
+            countries = try JSONDecoder().decode([Country].self, from: data)
+        } catch {
+            fatalError("Cant parse data: \(error)")
+        }
+        return countries
+    }
 }
