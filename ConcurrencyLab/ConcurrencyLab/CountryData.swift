@@ -6,7 +6,7 @@
 //  Copyright © 2019 Matthew Ramos. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Country: Decodable {
     let name: String

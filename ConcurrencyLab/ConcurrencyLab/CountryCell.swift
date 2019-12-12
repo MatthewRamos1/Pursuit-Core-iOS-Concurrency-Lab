@@ -16,10 +16,20 @@ class CountryCell: UITableViewCell {
     @IBOutlet weak var flagView: UIImageView!
     
     func configureCell (_ country: Country){
+        
         countryNameLabel.text = country.name
         capitalLabel.text = country.capital
         populationLabel.text = "Population: " + country.populationFormatter()
-        
-    }
     
+        flagView.getImage(with: country.flagURL) { [weak self] result in
+            switch result {
+            case .failure:
+                (self?.flagView.image = UIImage(systemName: "xmark.icloud"))
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.flagView.image = image
+                }
+            }
+        }
+    }
 }

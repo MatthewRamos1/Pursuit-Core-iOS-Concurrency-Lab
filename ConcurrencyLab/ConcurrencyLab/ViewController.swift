@@ -13,13 +13,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var countries = [Country]()
+    var countries = [Country]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    let data = Bundle.readJSONData(filename: "countryData", ext: "json")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let data = Bundle.readJSONData(filename: "countryData", ext: "json")
         countries = Country.getCountries(data)
         tableView.dataSource = self
+        searchBar.delegate = self
         
     }
 
@@ -48,5 +54,16 @@ extension ViewController: UITableViewDataSource {
     }
     
     
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text else {
+            print("Missing search text")
+            return
+        }
+        countries = Country.getCountries(data)
+        countries = countries.filter { ($0.name.lowercased() + $0.capital.lowercased()).contains(searchText.lowercased())}
+    }
 }
 
