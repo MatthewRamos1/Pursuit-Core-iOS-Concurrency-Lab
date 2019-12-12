@@ -23,6 +23,12 @@ class ViewController: UIViewController {
         
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("Error: Check prepare for segue")
+        }
+        detailVC.country = countries[indexPath.row]
+    }
 
 }
 

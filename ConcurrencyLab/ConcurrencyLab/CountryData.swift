@@ -28,6 +28,12 @@ struct Currency: Decodable {
 
 extension Country {
     
+    func populationFormatter() -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        return numberFormatter.string(from: NSNumber(value:population)) ?? "Error"
+    }
+    
     static func getCountries(_ data: Data) -> [Country] {
         var countries = [Country]()
         do {

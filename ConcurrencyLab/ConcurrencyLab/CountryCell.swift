@@ -18,10 +18,7 @@ class CountryCell: UITableViewCell {
     func configureCell (_ country: Country){
         countryNameLabel.text = country.name
         capitalLabel.text = country.capital
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        let formattedNumber = numberFormatter.string(from: NSNumber(value:country.population))
-        populationLabel.text = "Population: " + (formattedNumber ?? "Error")
+        populationLabel.text = "Population: " + country.populationFormatter()
         
     }
     

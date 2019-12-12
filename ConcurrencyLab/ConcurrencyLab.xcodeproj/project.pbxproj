@@ -20,6 +20,7 @@
 		0CBAC7B423A18B6B00B705B9 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAC7B323A18B6B00B705B9 /* NetworkHelper.swift */; };
 		0CBAC7B623A18DDC00B705B9 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAC7B523A18DDC00B705B9 /* AppError.swift */; };
 		0CBAC7B823A192C200B705B9 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAC7B723A192C200B705B9 /* CountryCell.swift */; };
+		0CBAC7C423A2D2F100B705B9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAC7C323A2D2F100B705B9 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		0CBAC7B323A18B6B00B705B9 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		0CBAC7B523A18DDC00B705B9 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		0CBAC7B723A192C200B705B9 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		0CBAC7C323A2D2F100B705B9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +77,12 @@
 				0CB0288B239F401800E36E41 /* AppDelegate.swift */,
 				0CB0288D239F401800E36E41 /* SceneDelegate.swift */,
 				0CBAC7B523A18DDC00B705B9 /* AppError.swift */,
-				0CBAC7B723A192C200B705B9 /* CountryCell.swift */,
 				0CB028A4239F459500E36E41 /* CountryData.swift */,
+				0CBAC7B723A192C200B705B9 /* CountryCell.swift */,
+				0CBAC7B323A18B6B00B705B9 /* NetworkHelper.swift */,
 				0CB028A1239F444D00E36E41 /* Bundle + Extensions.swift */,
 				0CB0288F239F401800E36E41 /* ViewController.swift */,
-				0CBAC7B323A18B6B00B705B9 /* NetworkHelper.swift */,
+				0CBAC7C323A2D2F100B705B9 /* DetailViewController.swift */,
 				0CB02891239F401800E36E41 /* Main.storyboard */,
 				0CB02894239F401D00E36E41 /* Assets.xcassets */,
 				0CB02896239F401D00E36E41 /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CBAC7C423A2D2F100B705B9 /* DetailViewController.swift in Sources */,
 				0CBAC7B823A192C200B705B9 /* CountryCell.swift in Sources */,
 				0CB02890239F401800E36E41 /* ViewController.swift in Sources */,
 				0CB028A5239F459500E36E41 /* CountryData.swift in Sources */,
